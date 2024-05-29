@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="columna1">
+        <div>
+          <form action="" class="search" id="search">
+            <input type="text" id="query" placeholder="Search.." />
+            <button >
+               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+              </svg>      
+              
+            </button>
+          
+          </form>
+          <div class="weather-icon">
+            <img id="icon" src="icons/sun/4.png" />
+          </div>
+          <div class="temperature">
+            <h1 id="temp">0</h1>
+            <span class="temp-unit">°C</span>
+          </div>
+          <div class="date-time">
+            <p id="date-time">Monday, 12:00</p>
+          </div>
+          <!-- <div class="divider"></div> -->
+          <div class="condition-rain">
+            <div class="condition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cloud-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"
+                />
+              </svg>
+
+              <div class="condition" id="condition">condition</div>
+              <div class="rain">
+                <p id="rain">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-droplet-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6M6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13"
+                    />
+                  </svg>
+                  per - 0%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- </div> -->
+        </div>
+        <div class="location">
+          <div class="location-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-geo-alt-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+              />
+            </svg>
+          </div>
+          <div class="location-text">
+            <p id="location">location</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columna2">
+        <nav>
+          <ul class="options">
+            <button class="hourly">today</button>
+            <button class="week active">week</button>
+          </ul>
+          <ul class="options units">
+            <button class="celcius active">°C</button>
+            <button class="fahrenheit active">°F</button>
+          </ul>
+        </nav>
+        <div class="cards" id="weather-cards">
+          <!-- <div class="card">
+          <h2 class="day-name">Monday</h2>
+          <div class="card-icon">
+            <img src="/icons/moon/1.png" alt="" />
+          </div>
+          <div class="day-temp">
+            <h2 class="temp">32</h2>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>  -->
+        </div>
+        <div class="highlights">
+          <h2 class="heading">Today's Highlights</h2>
+          <div class="cards">
+            <div class="card2">
+              <h4 class="card-heading">UV Index</h4>
+              <div class="content">
+                <p class="uv-index">0</p>
+                <p class="uv-text">Low</p>
+              </div>
+            </div>
+            <div class="card2">
+              <h4 class="card-heading">Wind Status</h4>
+              <div class="content">
+                <p class="wind-speed">0</p>
+                <p class="">Low</p>
+              </div>
+            </div>
+
+            <div class="card2">
+              <h4 class="card-heading">Sunrise & Sunset</h4>
+              <div class="content">
+                <p class="sun-rise">0</p>
+                <p class="sun-set">Low</p>
+              </div>
+            </div>
+
+            <div class="card2">
+              <h4 class="card-heading">Humidity</h4>
+              <div class="content">
+                <p class="humidity">0</p>
+                <p class="humidity-status">Low</p>
+              </div>
+            </div>
+
+            <div class="card2">
+              <h4 class="card-heading">Visibility</h4>
+              <div class="content">
+                <p class="visibility">0</p>
+                <p class="visibility-status">Low</p>
+              </div>
+            </div>
+
+            <div class="card2">
+              <h4 class="card-heading">Air Quality</h4>
+              <div class="content">
+                <p class="air-quality">0</p>
+                <p class="air-quality-status">Low</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="credits">2024 - Carla Massat</p>
+      </div>
+    </div>
+  </body>
+  <script src="js/app.js"></script>
+</html>
