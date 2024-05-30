@@ -170,7 +170,7 @@ flex-direction: column;
 /*Estilos columna2 */
 .columna2 {
   /* width: 100%; */
-  min-width: 400px;
+  /* min-width: 400px; */
   padding: 20px 40px;
   background-color: #f6f6f8;
   position: relative;
