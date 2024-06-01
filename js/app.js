@@ -185,14 +185,13 @@ const updateAirQualityStatus = (airQuality) => {
 
 // funcion salida y entrada del sol
 const convertTimeTo12HourFormat = (time) => {
-  let hour = time.split(":")[0];
-  let minute = time.split(":")[1];
-  let ampm = hour >= 12 ? "pm" : "am"; // operador ternario
+  let [hour, minute] = time.split(":");
+  hour = parseInt(hour, 10);
+  minute = parseInt(minute, 10);
+  let ampm = hour >= 12 ? "pm" : "am";
   hour = hour % 12;
   hour = hour ? hour : 12; // la hora 0 debe ser 12
-  hour = hour < 10 ? "0" + hour : hour;
-  minute = minute < 10 ? "0" + minute : minute;
-  let strTime = hour + ":" + minute + " " + ampm;
+  let strTime = `${hour < 10 ? "0" + hour : hour}:${minute < 10 ? "0" + minute : minute} ${ampm}`;
   return strTime;
 };
 
